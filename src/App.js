@@ -8,13 +8,6 @@ import EditMovie from './pages/EditMovie';
 import NotFound from './pages/NotFound';
 
 class App extends React.Component {
-  // constructor(props) {
-  //   super(props);
-  //   this.state = {
-  //     movie: '',
-  //   };
-  // }
-
   render() {
     return (
       <BrowserRouter>

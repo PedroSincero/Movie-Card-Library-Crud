@@ -14,7 +14,6 @@ class EditMovie extends Component {
     };
     this.handleSubmit = this.handleSubmit.bind(this);
   }
-  // Retirado o updatedMovie
 
   componentDidMount() {
     this.functionAPI();
