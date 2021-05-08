@@ -12,8 +12,6 @@ class NewMovie extends Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  // contem um NewMovie no parametro de handle submit
-
   handleSubmit(movie) {
     movieAPI.createMovie(movie);
     this.setState({

@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-import { Redirect } from 'react-router-dom';
 import Link from 'react-router-dom/Link';
 import * as movieAPI from '../services/movieAPI';
 import { Loading } from '../components';
