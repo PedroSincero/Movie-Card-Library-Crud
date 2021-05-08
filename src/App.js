@@ -36,4 +36,4 @@ class App extends React.Component {
 
 export default App;
 
-// Agradecimentos a Daniel Roberto, Lucas Martins, Jonathan Souza.
+// Agradecimentos a Daniel Roberto, Lucas Martins, Jonathan Souza, Elanoevaristo, ADAO BENITES.

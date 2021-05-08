@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
+import { Redirect } from 'react-router-dom';
 import Link from 'react-router-dom/Link';
 import * as movieAPI from '../services/movieAPI';
 import { Loading } from '../components';
@@ -7,10 +8,9 @@ import { Loading } from '../components';
 class MovieDetails extends Component {
   constructor() {
     super();
-
+    this.DeleteThis = this.DeleteThis.bind(this);
     this.state = {
       movie: '',
-      // loading: true,
     };
   }
 
@@ -21,9 +21,11 @@ class MovieDetails extends Component {
     });
   }
 
+  async DeleteThis(thisId) {
+    await movieAPI.deleteMovie(thisId);
+  }
+
   render() {
-  // Change the condition to check the state
-  // if (true) return <Loading />;
     const { match: { params: { id } } } = this.props;
     const { movie:
       { title, storyline, imagePath, genre, rating, subtitle } } = this.state;
@@ -41,6 +43,7 @@ class MovieDetails extends Component {
               <p>{ `Rating: ${rating}` }</p>
               <Link to="/">VOLTAR</Link>
               <Link to={ `/movies/${id}/edit` }>EDITAR</Link>
+              <Link to="/" onClick={ () => this.DeleteThis(id) }>DELETAR</Link>
             </div>
           )}
       </div>
